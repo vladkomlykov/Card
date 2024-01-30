@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Card" Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="txtBl">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="txtBo">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="AliceBlue">
+    <Grid Height="350" Width="350" Background="White">
+            <StackPanel Margin="30,30,30,30">
+                <TextBlock Style="{StaticResource txtBl}">Номер карты</TextBlock>
+                <TextBox x:Name="num" Style="{StaticResource txtBo}"></TextBox>
+                <TextBlock Style="{StaticResource txtBl}">Имя карты</TextBlock>
+                <TextBox x:Name="name" Style="{StaticResource txtBo}"></TextBox>
+                <TextBlock Style="{StaticResource txtBl}">Дата активности</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="Mounth" Margin="0,0,10,0" Width="70">
+                        <sys:String>Январь</sys:String>
+                        <sys:String>Февраль</sys:String>
+                        <sys:String>Март</sys:String>
+                        <sys:String>Апрель</sys:String>
+                        <sys:String>Май</sys:String>
+                        <sys:String>Июнь</sys:String>
+                        <sys:String>Июль</sys:String>
+                        <sys:String>Август</sys:String>
+                        <sys:String>Сентябрь</sys:String>
+                        <sys:String>Октябрь</sys:String>
+                        <sys:String>Ноябрь</sys:String>
+                        <sys:String>Декабрь</sys:String>
+                    </ComboBox>
+                    <ComboBox x:Name="Year" Width="60">
+                        <sys:String>2000</sys:String>
+                        <sys:String>2001</sys:String>
+                        <sys:String>2002</sys:String>
+                        <sys:String>2003</sys:String>
+                        <sys:String>2004</sys:String>
+                        <sys:String>2005</sys:String>
+                        <sys:String>2006</sys:String>
+                        <sys:String>2007</sys:String>
+                        <sys:String>2008</sys:String>
+                        <sys:String>2009</sys:String>
+                        <sys:String>2010</sys:String>
+                        <sys:String>2011</sys:String>
+                        <sys:String>2012</sys:String>
+                        <sys:String>2013</sys:String>
+                        <sys:String>2014</sys:String>
+                        <sys:String>2015</sys:String>
+                        <sys:String>2016</sys:String>
+                        <sys:String>2017</sys:String>
+                        <sys:String>2018</sys:String>
+                    </ComboBox>
+                    <TextBlock Margin="10,0,0,0" Style="{StaticResource txtBl}">CVV</TextBlock>
+                    <TextBox x:Name="cvv" Style="{StaticResource txtBo}" Margin="10,0,0,0" Width="100"></TextBox>
+                </StackPanel>
+                <Button x:Name="pay" Click="pay_Click" Background="Blue" FontSize="23" Foreground="White" Height="30" Margin="0,10,0,0">Оплатить</Button>
+            </StackPanel>
+    </Grid>
+    </Grid>
+</Window>
